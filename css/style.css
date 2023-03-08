@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(../images/background.jpg);
+    background-size: cover;
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Opacity 0 makes element invisible */
+.not-active {
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+
+/* Opacity 1 makes element visible */
+.active {
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+}
+
+.slider-image {
+    position: absolute;
+    width: 100%;
+}
+
+.slider-image img {
+    width: 100%;
+}
+
+.slider {
+    position: relative;
+    height: 560px;
+    width: 1000px;
+}
+
+.right-arrow {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    filter: brightness(400%);
+    transition: 0.2s ease-in-out;
+}
+
+.left-arrow {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 5;
+    filter: brightness(400%);
+    transition: 0.2s ease-in-out;
+}
+
+.left-arrow:hover,
+.right-arrow:hover {
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+}
+
+.dot-1 {
+    position: absolute;
+    bottom: 2%;
+    left: 45%;
+    transform: translate(-50%, 50%);
+
+}
+
+.dot-2 {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+
+}
+
+.dot-3 {
+    position: absolute;
+    bottom: 2%;
+    left: 55%;
+    transform: translate(-50%, 50%);
+}
+
+.dot {
+    transition: 0.2s ease-in-out;
+}
+
+.dot:hover {
+    filter: brightness(400%);
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+}
+
+/* Highlighting the element by increasing it's brightness to 400% */
+.dot-active {
+    filter: brightness(400%);
+    width: 60px;
+    height: 60px;
+}
